@@ -27,6 +27,8 @@ package body run_pkg is
     variable checker_cfg : checker_cfg_export_t;
     variable selected_enabled_test_cases : line;
   begin
+    report "runner_cfg'length = " & integer'image(runner_cfg'length);
+    report runner_cfg;
 
     -- fake active python runner key is only used during testing in tb_run.vhd
     -- to avoid creating vunit_results file
